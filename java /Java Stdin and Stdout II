@@ -1,0 +1,29 @@
+1)https://www.hackerrank.com/challenges/java-stdin-stdout/submissions/code/463840826
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        // 1. Read the Integer
+        int i = scan.nextInt();
+        
+        // 2. Read the Double
+        double d = scan.nextDouble();
+        
+        // 3. Clear the buffer! 
+        // nextDouble() left a newline character behind; this consumes it.
+        scan.nextLine(); 
+        
+        // 4. Read the String
+        String s = scan.nextLine();
+
+        scan.close();
+
+        // Write your output in the specific order requested
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+    }
+}

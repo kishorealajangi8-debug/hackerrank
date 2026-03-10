@@ -1,0 +1,21 @@
+import java.util.*;
+import java.math.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        scanner.close();
+
+        // Create a BigInteger from the input string
+        BigInteger bi = new BigInteger(n);
+
+        // check isProbablePrime(certainty)
+        // A certainty of 100 ensures the probability of error is 1 - (1/2)^100
+        if (bi.isProbablePrime(100)) {
+            System.out.println("prime");
+        } else {
+            System.out.println("not prime");
+        }
+    }
+}
